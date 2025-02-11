@@ -1,97 +1,79 @@
-# Project<!-- Project Title -->
+# Thor Galactica
 
-<!-- Find and replace elements that start with '<!--' and remove this line -->
+Welcome to **Thor Galactica** – the central repository for all artifacts, information, and documentation related to the Galactica hardfork.
 
-![Project Logo](project-logo.png)
+> **Note:** This repository is a work in progress. More detailed content (such as comprehensive documentation, faucet instructions, and genesis usage guidelines) will be added over time.
 
-## Introduction
+---
 
-A brief description of your project, its purpose, and main features.
+## Overview
 
-This is a template repository, that allows you to quickly create new repos with the following templates:
-1. [README.md](README.md)
-2. [CONTRIBUTING.md](CONTRIBUTING.md)
-3. [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-4. [CODEOWNERS](CODEOWNERS)
-5. [LICENSE.md](LICENSE.md)
+The **Galactica hardfork** marks an important milestone in our project’s evolution. This repository will eventually include:
 
-Consider turning on branch protection for `main` as follows:
-1. Require a pull request before merging.
-  1. Require 1 approval.
-  2. Dismiss stale pull request approvals when new commits are pushed.
-  3. Require review from Code Owners.
-  4. Require approval of the most recent reviewable push.
-2. Require status checks to pass before merging.
-3. Require branches to be up to date before merging.
-4. Require conversation resolution before merging.
-5. Require deployments to succeed before merging.
+- **Documentation:** In-depth guides, technical articles, and best practices.
+- **Faucet Instructions:** Step-by-step instructions for accessing and using our faucet.
+- **Genesis Usage Instructions:** Detailed guidance on leveraging genesis data and setting up your environment.
+- **Additional Resources:** Other relevant artifacts, tutorials, and references.
 
-## Table of Contents
+---
 
-- [Project](#project)
-  - [Introduction](#introduction)
-  - [Table of Contents](#table-of-contents)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Configuration](#configuration)
-    - [Usage](#usage)
-    - [Documentation](#documentation)
-    - [Contributing](#contributing)
-    - [Roadmap](#roadmap)
-    - [Changelog](#changelog)
-    - [License](#license)
-    - [Credits](#credits)
+## Contents
+
+- **[Documentation](docs/README.md)** *(Coming Soon)*  
+  Detailed guides, technical documentation, and best practices.
+  
+- **[Faucet Instructions](faucet.md)** *(Coming Soon)*  
+  How to access and effectively use the faucet.
+  
+- **[Genesis Usage Instructions](genesis.md)** *(Coming Soon)*  
+  Step-by-step instructions for working with genesis data.
+
+- **Additional Resources**  
+  More artifacts and support materials will be added as the project evolves.
+
+---
 
 ## Getting Started
 
-### Prerequisites
+As this repository is currently a placeholder, there are no direct installation or usage instructions yet. In upcoming releases, you can expect:
 
-List the required software, libraries, or tools needed to use or contribute to the project.
+- **Prerequisites:**  
+  Information on the required software, libraries, and dependencies.
 
-### Installation
+- **Installation Guides:**  
+  Detailed setup instructions to get your environment up and running.
 
-Provide step-by-step instructions for installing the project, including any required dependencies.
+- **Usage Examples:**  
+  Practical examples and code snippets to help you work with the Galactica hardfork.
 
-```bash
-# Example installation commands
-```
+Please check back frequently for updates!
 
-### Configuration
+---
 
-Explain how to configure the project, if necessary.
+## Contributing
 
-### Usage
+We welcome community contributions and feedback! If you have suggestions, improvements, or additional documentation to share, please consider:
 
-Include code examples or usage instructions to help users get started quickly.
+1. **Forking the Repository:**  
+   Create your own branch and propose changes via pull requests.
+   
+2. **Opening an Issue:**  
+   Use the issue tracker to discuss potential enhancements or report bugs.
 
-### Documentation
+Be sure to review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
 
-Link to any additional documentation or tutorials, either within your repository or hosted externally.
+---
 
-### Contributing
+## License
 
-Explain how others can contribute to the project. Include information on:
+This project is licensed under the [MIT License](LICENSE). See the LICENSE file for details.
 
-    How to submit bug reports or feature requests.
-    The process for submitting pull requests.
-    Any specific coding standards or guidelines.
-    The best way to get in touch with the maintainers, if needed.
-    
-You may use [a separate `CONTRIBUTING` file](CONTRIBUTING.md) to keep your `README.md` short.
+---
 
-### Roadmap
+## Contact
 
-Share the project's development roadmap, if available, including planned features and improvements.
+For any questions, suggestions, or discussions, please open an issue or reach out to the project maintainers.
 
-### Changelog
+---
 
-Keep a log of all notable changes and updates in the project.
-
-### License
-
-This project is licensed under <!-- update the license name --> [the LICENSE](LICENSE.md).
-
-### Credits
-
-Recognize any significant contributors, sponsors, or organizations that have supported the project.
+Stay tuned for further updates and expanded documentation on the Galactica hardfork!
