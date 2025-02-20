@@ -203,13 +203,13 @@ const main = async () => {
     }
 
     function bigIntReplacer(_key, value) {
-        return typeof value === 'bigint' ? value.toString() : value
+        return typeof value === 'bigint' ? value.toString() : value;
     }
-
+    
     fs.writeFileSync(
         `${outDir}/genesis.json`,
-        JSON.stringify(genesis, bigIntReplacer),
-    )
+        JSON.stringify(genesis, bigIntReplacer, 2), // Indent with 2 spaces
+    );
     fs.writeFileSync(
         `${outDir}/authority-keys.json`,
         JSON.stringify(authorityKeys, null, 2),
@@ -217,6 +217,10 @@ const main = async () => {
     fs.writeFileSync(
         `${outDir}/endorsor-keys.json`,
         JSON.stringify(endorsorAccounts, null, 2),
+    )
+    fs.writeFileSync(
+        `${outDir}/executor-keys.json`,
+        JSON.stringify(executorAccounts, null, 2),
     )
     fs.writeFileSync(
         `${outDir}/genesis-keys.json`,
