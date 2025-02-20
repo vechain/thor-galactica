@@ -71,8 +71,12 @@ const main = async () => {
         max: 1000,
     })
 
+    const mnemonic = sdk.Mnemonic.of(12)
+    const node = sdk.HDKey.fromMnemonic(mnemonic)
+
     for (let i = 0; i < accounts; i++) {
-        const key = await sdk.Secp256k1.generatePrivateKey()
+        const child = node.deriveChild(i)
+        const key = child.privateKey
         const keyHex = Buffer.of(...key).toString('hex')
         const address = sdk.Address.ofPrivateKey(key)
         genesisAccounts[i] = {
@@ -217,6 +221,10 @@ const main = async () => {
     fs.writeFileSync(
         `${outDir}/genesis-keys.json`,
         JSON.stringify(genesisKeys, null, 2),
+    )
+    fs.writeFileSync(
+        `${outDir}/genesis-mnemonic.txt`,
+        JSON.stringify(mnemonic.toString(" "), null, 2),
     )
 }
 

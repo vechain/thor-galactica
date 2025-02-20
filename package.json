@@ -4,6 +4,7 @@
   "repository": "git@github.com:vechain/thor-galactica.git",
   "author": "Darren Kelly <darren.kelly@vechain.org>",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "prompts": "^2.4.2"
   },
