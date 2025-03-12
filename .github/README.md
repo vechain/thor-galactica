@@ -25,7 +25,7 @@ The **Galactica hardfork** marks an important milestone in our project’s evolu
 - **[Faucet Instructions](faucet.md)** *(Coming Soon)*  
   How to access and effectively use the faucet.
   
-- **[Genesis Usage Instructions](genesis.md)** *(Coming Soon)*  
+- **[Genesis Usage Instructions](genesis.md)** 
   Step-by-step instructions for working with genesis data.
 
 - **Additional Resources**  
