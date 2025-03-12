@@ -51,18 +51,19 @@ The expected output files are (within the `custom-net` folder, following the val
 
 In this document we will be providing a way to run a node using the generated file. We are assuming that:
 1. The folder name is `custom-net`, please change it accordingly if you have provided a different one.
-2. You have built the binary [as described here](https://github.com/vechain/thor/blob/master/docs/build.md) so `thor` is available
+2. You have built the binary [as described here](https://github.com/vechain/thor/blob/master/docs/build.md) under the `thor` folder.
+3. You are running everything from the root of the repository.
 
 The same can be done by providing an URL instead with the location of the genesis file, like the one in [this example](https://raw.githubusercontent.com/vechain/thor/master/genesis/example.json).
 
 ### Solo
 
 ```bash
-bin/thor --genesis custom-net/genesis.json
+./thor/bin/thor --genesis custom-net/genesis.json
 ```
 
 ### Custom network
 
 ```bash
-bin/thor --network custom-net/genesis.json
+./thor/bin/thor --network custom-net/genesis.json
 ```
