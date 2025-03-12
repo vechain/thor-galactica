@@ -1,8 +1,8 @@
-# Generate genesis file
+# Genesis instructions
 
-The purpose of this document is to explain how to generate a genesis.json file for the blockchain and its ancilliary files.
+The purpose of this document is to explain how to generate a `genesis.json` file for the blockchain and its ancillary files. It also provides a guide on how to use these files with the `thor` binary.
 
-In order to do so, we rely on the script `generate-genesis.js` located in the `scripts` folder.
+To generate the genesis files, we use the `generate-genesis.js` script located in the `scripts` folder.
 
 
 ## How to generate the files
