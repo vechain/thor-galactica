@@ -1,25 +1,24 @@
-# Genesis instructions
+# Genesis Instructions
 
-The purpose of this document is to explain how to generate a `genesis.json` file for the blockchain and its ancillary files. It also provides a guide on how to use these files with the `thor` binary.
+This document explains how to generate a `genesis.json` file for the blockchain and its ancillary files. It also provides a guide on how to use these files with the `thor` binary.
 
 To generate the genesis files, we use the `generate-genesis.js` script located in the `scripts` folder.
 
+## How to Generate the Files
 
-## How to generate the files
-
-First of all, we install the dependencies of the project:
+First, install the project dependencies:
 
 ```bash
 yarn
 ```
 
-After that, we should run the following command that will generate all the files:
+Next, run the following command to generate all the files:
 
 ```bash
 node scripts/generate-genesis.js
 ```
 
-We will be prompted to provide the values to be included in the files. These are the default ones:
+You will be prompted to provide values to be included in the files. These are the default ones:
 
 ```
 ✔ Enter the gas limit for the genesis block … 40000000
@@ -38,8 +37,8 @@ We will be prompted to provide the values to be included in the files. These are
 ✔ Enter the output directory … ./custom-net
 ```
 
+The expected output files are located within the `custom-net` folder (or the directory you specified):
 
-The expected output files are (within the `custom-net` folder, following the value provided above):
 - `authority-keys.json`: Address and private key pair for the authority nodes
 - `endorsor-keys.json`: Address and private key pair for the endorsors (same number as authority)
 - `executor-keys.json`: Address and private key pair for the executors
@@ -47,14 +46,14 @@ The expected output files are (within the `custom-net` folder, following the val
 - `genesis-mnemonic.txt`: Mnemonic to generate the accounts from
 - `genesis.json`: Final genesis file relying on the data provided by the above files
 
-## How to run a node with the genesis file
+## How to Run a Node with the Genesis File
 
-In this document we will be providing a way to run a node using the generated file. We are assuming that:
-1. The folder name is `custom-net`, please change it accordingly if you have provided a different one.
+This section provides instructions on how to run a node using the generated file. We assume that:
+1. The folder name is `custom-net`. Please change it accordingly if you provided a different one.
 2. You have built the binary [as described here](https://github.com/vechain/thor/blob/master/docs/build.md) under the `thor` submodule.
 3. You are running everything from the root of the repository.
 
-The same can be done by providing an URL instead with the location of the genesis file, like the one in [this example](https://raw.githubusercontent.com/vechain/thor/master/genesis/example.json).
+You can also provide a URL with the location of the genesis file, like the one in [this example](https://raw.githubusercontent.com/vechain/thor/master/genesis/example.json).
 
 ### Solo
 
@@ -62,7 +61,7 @@ The same can be done by providing an URL instead with the location of the genesi
 ./thor/bin/thor --genesis custom-net/genesis.json
 ```
 
-### Custom network
+### Custom Network
 
 ```bash
 ./thor/bin/thor --network custom-net/genesis.json
