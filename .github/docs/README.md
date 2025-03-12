@@ -25,9 +25,17 @@ With the Galactica hardfork, the following API endpoints and flags are introduce
     _Response parameters_:
     - `maxPriorityFeePerGas`: Tip value to be used as the `maxPriorityFeePerGas` in a transaction (also to be considered for `maxFeePerGas` since it is the block base fee + this tip)
 
+Full definition of the endpoints can be found in [thor.yaml](../../thor/api/doc/thor.yaml).
+
 ## Flags
 
-Blabla
+There are new flags introduced to configure the behavior of Galactica. Also, as mentioned in the endpoints, the existing backtrace limit is used by `fees/history`:
+
+- `--api-priority-fees-percentage`: This a percentage applied to the most recent block base fee (`next`) to suggest a tip for the `fees/priority` endpoint. The default value is 5 (5%).
+- `--min-effective-priority-fee`: Minimum effective priority (the minimum between `maxPriorityFeePerGas` and `maxFeePerGas - block base fee`) that can be used in a transaction. The default value is 0 so the flag is optional.
+- `--api-backtrace-limit`: Backtrace limit, starting from the `best` block. The default value is 1000.
+
+Full up-to-date description of the flags can be found in the [usage documentation](../../thor/docs/usage.md).
 
 ## Run Galactica with Thor Solo
 
