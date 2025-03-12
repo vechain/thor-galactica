@@ -6,7 +6,7 @@ Welcome to **Thor Galactica** – the central repository for all artifacts, info
 
 ---
 
-## Content overview
+## Content Overview
 
 The **Galactica hardfork** marks an important milestone in our project’s evolution. This repository includes:
 
@@ -14,10 +14,10 @@ The **Galactica hardfork** marks an important milestone in our project’s evolu
 - **[Documentation](docs/README.md)** *(WIP)* 
   Detailed guides, technical documentation, and best practices.
   
-- **[Faucet instructions](faucet/README.md)**
+- **[Faucet Instructions](faucet/README.md)**
   How to access and effectively use the faucet.
   
-- **[Genesis instructions](genesis.md)** 
+- **[Genesis Instructions](genesis.md)** 
   Step-by-step instructions for working with genesis data.
 
 - **[VIPs](vip.md)** 
@@ -28,7 +28,7 @@ The **Galactica hardfork** marks an important milestone in our project’s evolu
 
 ---
 
-## Getting started
+## Getting Started
 
 As this repository is currently a placeholder, there are no direct installation or usage instructions yet. In upcoming releases, you can expect:
 
