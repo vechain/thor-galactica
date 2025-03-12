@@ -45,4 +45,24 @@ The expected output files are (within the `custom-net` folder, following the val
 - `executor-keys.json`: Address and private key pair for the executors
 - `genesis-keys.json`: Address and private key pair to be included in the genesis block
 - `genesis-mnemonic.txt`: Mnemonic to generate the accounts from
-- `genesis.json`: Final genesis file including the info from the above files
+- `genesis.json`: Final genesis file relying on the data provided by the above files
+
+## How to run a node with the genesis file
+
+In this document we will be providing a way to run a node using the generated file. We are assuming that:
+1. The folder name is `custom-net`, please change it accordingly if you have provided a different one.
+2. You have built the binary [as described here](https://github.com/vechain/thor/blob/master/docs/build.md) so `thor` is available
+
+The same can be done by providing an URL instead with the location of the genesis file, like the one in [this example](https://raw.githubusercontent.com/vechain/thor/master/genesis/example.json).
+
+### Solo
+
+```bash
+bin/thor --genesis custom-net/genesis.json
+```
+
+### Custom network
+
+```bash
+bin/thor --network custom-net/genesis.json
+```
