@@ -1,42 +1,44 @@
-# Documentation *(work in progress)*
+# Documentation *(Work in Progress)*
 
-This documentation is a work in progress. It will be updated as new features are added.
+This documentation is a work in progress and will be updated as new features are added.
 
 With the Galactica hardfork, the following API endpoints and flags are introduced.
 
 ## Endpoints
 
-- `fees/history`: Similar to [`eth_feeHistory`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_feehistory/), allows you to retrieve the information about a range of block base fees and gas used ratios. 
+- `fees/history`: Similar to [`eth_feeHistory`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_feehistory/), this endpoint allows you to retrieve information about a range of block base fees and gas used ratios.
 
     _Request parameters_:
 
-    - `blockCount`: Number of blocks to retrieve.
+    - `blockCount`: The number of blocks to retrieve.
     - `newestBlock`: The highest block number to retrieve, its value is a `revision` following the existing VeChainThor endpoints.
 
     _Response parameters_:
-    The range might not be `newestBlock` - `blockCount` necessarily if the oldest block does not exist/is not included because of the backtrace limit (see flags below for more details about this limit). `blockCount` can be higher than the backtrace limit but the response will include only values in the valid range.
+    The range might not necessarily be `newestBlock` - `blockCount` if the oldest block does not exist or is not included due to the backtrace limit (see flags below for more details about this limit). `blockCount` can be higher than the backtrace limit, but the response will include only values within the valid range.
 
-    - `oldestBlock`: Oldest block in the requested range. 
-    - `baseFees`: Array of block base fees for the requested range
-    - `gasUsedRatios`: Array of gas ratios (block gas used divided by the block gas limit) for the requested range
+    - `oldestBlock`: The oldest block in the requested range.
+    - `baseFees`: An array of block base fees for the requested range.
+    - `gasUsedRatios`: An array of gas ratios (block gas used divided by the block gas limit) for the requested range.
 
-- `fees/priority`: Similar to [`eth_maxPriorityFeePerGas`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_maxpriorityfeepergas/), suggests a tip that is enough to be included as the `maxPriorityFeePerGas` value in a transaction so it is included in the closest possible block.
+- `fees/priority`: Similar to [`eth_maxPriorityFeePerGas`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_maxpriorityfeepergas/), this endpoint suggests a tip that is sufficient to be included as the `maxPriorityFeePerGas` value in a transaction, ensuring it is included in the closest possible block.
 
     _Response parameters_:
-    - `maxPriorityFeePerGas`: Tip value to be used as the `maxPriorityFeePerGas` in a transaction (also to be considered for `maxFeePerGas` since it is the block base fee + this tip)
+    - `maxPriorityFeePerGas`: The tip value to be used as the `maxPriorityFeePerGas` in a transaction (also to be considered for `maxFeePerGas` since it is the block base fee plus this tip).
 
-Full definition of the endpoints can be found in [thor.yaml](../../thor/api/doc/thor.yaml).
+The full definition of the endpoints can be found in [thor.yaml](../../thor/api/doc/thor.yaml).
 
 ## Flags
 
-There are new flags introduced to configure the behavior of Galactica. Also, as mentioned in the endpoints, the existing backtrace limit is used by `fees/history`:
+New flags have been introduced to configure the behavior of Galactica. As mentioned in the endpoints, the existing backtrace limit is used by `fees/history`:
 
-- `--api-priority-fees-percentage`: This a percentage applied to the most recent block base fee (`next`) to suggest a tip for the `fees/priority` endpoint. The default value is 5 (5%).
-- `--min-effective-priority-fee`: Minimum effective priority (the minimum between `maxPriorityFeePerGas` and `maxFeePerGas - block base fee`) that can be used in a transaction. The default value is 0 so the flag is optional.
-- `--api-backtrace-limit`: Backtrace limit, starting from the `best` block. The default value is 1000.
+- `--api-priority-fees-percentage`: This is a percentage applied to the most recent block base fee (`next`) to suggest a tip for the `fees/priority` endpoint. The default value is 5 (5%).
+- `--min-effective-priority-fee`: The minimum effective priority (the minimum between `maxPriorityFeePerGas` and `maxFeePerGas - block base fee`) that can be used in a transaction. The default value is 0, so this flag is optional.
+- `--api-backtrace-limit`: The backtrace limit, starting from the `best` block. The default value is 1000.
 
-Full up-to-date description of the flags can be found in the [usage documentation](../../thor/docs/usage.md).
+A full up-to-date description of the flags can be found in the [usage documentation](../../thor/docs/usage.md#command-line-options).
 
 ## Run Galactica with Thor Solo
 
-Blabla
+To run Galactica with Thor Solo, follow the instructions [here](../../thor/docs/usage.md#thor-solo).
+
+The only difference will be the location of the binary, which is `thor/bin/thor` from the root folder of this repository. All the flags and endpoints mentioned above apply.
