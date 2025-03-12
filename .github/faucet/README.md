@@ -6,12 +6,14 @@ We will be using [VeChain Faucet](https://faucet.vecha.in/). The main prerequisi
 
 ## Steps
 
-1. Navigate to the faucet website and click on the `Claim Tokens` button. This will bring up the VeWorld extension: <img src="faucet-landing.png" alt="Faucet Landing Page" width="600">
+1. Navigate to the faucet website and click on the `Claim Tokens` button. This will bring up the VeWorld extension:
+
+   <img src="faucet-landing.png" alt="Faucet Landing Page" style="width: 100%; max-width: 1000px;">
 
 2. Within VeWorld, click on the `Sign` button to `Sign Certificate`.
 
 That's it! You should now see a confirmation indicating that you have received VET and VTHO (500 and 50, respectively):
 
-<img src="faucet-confirmation.png" alt="Faucet Confirmation" width="600">
+   <img src="faucet-confirmation.png" alt="Faucet Confirmation" style="width: 100%; max-width: 600px;">
 
 With these tokens, you can start working on the VeChain testnet. Remember that you can swap VET for VTHO if you need more funds, using VeWorld for that purpose.
