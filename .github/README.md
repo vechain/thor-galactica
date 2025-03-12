@@ -6,12 +6,12 @@ Welcome to **Thor Galactica** – the central repository for all artifacts, info
 
 ---
 
-## Overview
+## Content overview
 
 The **Galactica hardfork** marks an important milestone in our project’s evolution. This repository includes:
 
 
-- **[Documentation](docs/README.md)** *(Coming Soon)* 
+- **[Documentation](docs/README.md)** *(WIP)* 
   Detailed guides, technical documentation, and best practices.
   
 - **[Faucet instructions](faucet/README.md)**
@@ -23,12 +23,12 @@ The **Galactica hardfork** marks an important milestone in our project’s evolu
 - **[VIPs](vip.md)** 
   VeChain Improvement Proposals for the Galactica hardfork.
 
-- **Additional Resources**  *(Coming Soon)* 
+- **Additional resources**  *(coming soon)* 
   More artifacts and support materials will be added as the project evolves.
 
 ---
 
-## Getting Started
+## Getting started
 
 As this repository is currently a placeholder, there are no direct installation or usage instructions yet. In upcoming releases, you can expect:
 

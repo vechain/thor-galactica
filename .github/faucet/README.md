@@ -1,4 +1,4 @@
-# Faucet Instructions
+# Faucet instructions
 
 This document will guide you through the steps to obtain VET and VTHO for the testnet. VTHO is the token used for gas in VeChain. More details about these tokens can be found [here](https://docs.vechain.org/introduction-to-vechain/dual-token-economic-model).
 
