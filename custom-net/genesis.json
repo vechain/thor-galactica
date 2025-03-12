@@ -1,0 +1,154 @@
+{
+  "gasLimit": 40000000,
+  "extraData": "My Custom Genesis Block",
+  "forkConfig": {
+    "VIP191": 0,
+    "ETH_CONST": 0,
+    "BLOCKLIST": 0,
+    "ETH_IST": 0,
+    "VIP214": 0,
+    "FINALITY": 0
+  },
+  "accounts": [
+    {
+      "address": "0xd6930e4d89676257918F223BE057773d6D4fC04C",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x5d48DE00b25DA3CCedb0472A27785f929b6E1872",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x7506bDE64b56dE55ed402BE87C93F5e129b75534",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x75865D3F9025aFBAAdCb56DCc05aceb6509e4F2C",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x62ace4836a09c30aE3bb36cE9bcFBD45Eec40762",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x6740834cd2Ba1D0bEF73e9AecE317cCa5CED7320",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x6bFDB8E6Bba6746Fcc48256aFC2Ca46b56daaD41",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0xF1d1fe45203fb1103188E7D4fa7F3Cb1a3C26c1b",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x0d2C10dBaF2EEe9d20F392a47f239904eBbe3E1f",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0xF166D46D16D4C763a3F9fC31EE75E59ea94dF45e",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x62f137b16D5E38bC301Bb7119D51E08b4c5509eF",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000",
+      "code": "0x6060604052600256",
+      "storage": {
+        "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000002"
+      }
+    },
+    {
+      "address": "0x03CdC14072E7e84FEAeC71063C63CE090eB358fF",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x8230FE8723d84869A64ED7f3B4762F9506237266",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000",
+      "code": "0x6060604052600256",
+      "storage": {
+        "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000002"
+      }
+    },
+    {
+      "address": "0x7e6E4f8A61Db0b5E35b1364AB791c4f1497F2595",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0x48087Bb291E752Aa28F7352286A5985c5EA3e4fe",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000",
+      "code": "0x6060604052600256",
+      "storage": {
+        "0x0000000000000000000000000000000000000000000000000000000000000001": "0x0000000000000000000000000000000000000000000000000000000000000002"
+      }
+    },
+    {
+      "address": "0xfd42053BbDD4354B43C2d26c3783CB69Ae01aebe",
+      "balance": "0x33b2e3c9fd0803ce8000000",
+      "energy": "0x33b2e3c9fd0803ce8000000"
+    }
+  ],
+  "authority": [
+    {
+      "masterAddress": "0x03CdC14072E7e84FEAeC71063C63CE090eB358fF",
+      "endorsorAddress": "0x62f137b16D5E38bC301Bb7119D51E08b4c5509eF",
+      "identity": "0x2ddfc86b31e5ad243ad88ef477d26d706ce04663288c4d58461655be79df6e52"
+    },
+    {
+      "masterAddress": "0x7e6E4f8A61Db0b5E35b1364AB791c4f1497F2595",
+      "endorsorAddress": "0x8230FE8723d84869A64ED7f3B4762F9506237266",
+      "identity": "0xda1e20ce4aac1ddfc0833d887535c5fa6e24204aa17b9b6e28b27724e2a16410"
+    },
+    {
+      "masterAddress": "0xfd42053BbDD4354B43C2d26c3783CB69Ae01aebe",
+      "endorsorAddress": "0x48087Bb291E752Aa28F7352286A5985c5EA3e4fe",
+      "identity": "0x3953847d1fbbbff49ac9db0657ab2f6f0f8c5f0f7d01dc8f45bd83b3853c0569"
+    }
+  ],
+  "executor": {
+    "approvers": [
+      {
+        "address": "0x66d63254a8E3a4F0E5dAbB0fB15b31fF14E13680",
+        "identity": "0xa4d7a08212bfc1e22b8ee2c426e51e3818311ce3deee24e6a61bcbe79f51a8ef"
+      },
+      {
+        "address": "0x490Ce33b823538e7B496f1931EA4B17450eC50d3",
+        "identity": "0xe803084d30e069819e40082baeffd564c1517cbb5efdc6d1d8f97b52c7064417"
+      },
+      {
+        "address": "0x5292639bAE8a734BcC494f285afA1d90017Aa2ab",
+        "identity": "0x6ecd2bc1dbfbbc2f784621b95ac162cea69bbb2987a7753ccbc1c58911612a6c"
+      },
+      {
+        "address": "0x5002Aa8e175E592b72bE1a7c78FFd1d4a6AEA6c9",
+        "identity": "0x2f145cb5ca33bb1f4e43584ef56bdbdaa70e385121fc0ce497adcfe1213283c4"
+      },
+      {
+        "address": "0xc8a07e7139b21923BB313e9D834D15e3B7a3c5Fb",
+        "identity": "0xbec8d5607dde7610212cb81199610ee219ecb187de8ce23ba9036387f21d644c"
+      }
+    ]
+  },
+  "params": {
+    "executorAddress": "0x0000000000000000000000004578656375746f72",
+    "baseGasPrice": 10000000000000,
+    "rewardRatio": "300000000000000000",
+    "proposerEndorsement": "25000000000000000000000000"
+  },
+  "launchTime": 1741780040
+}
