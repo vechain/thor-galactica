@@ -14,7 +14,7 @@ With the Galactica hardfork, the following API endpoints and flags are introduce
     - `newestBlock`: The highest block number to retrieve, its value is a `revision` following the existing VeChainThor endpoints.
 
     _Response parameters_:
-    The range might not be `newestBlock` - `blockCount` necessarily if the oldest block does not exist/is not included because of the backtrace limit (see flags below for more details about this limit)
+    The range might not be `newestBlock` - `blockCount` necessarily if the oldest block does not exist/is not included because of the backtrace limit (see flags below for more details about this limit). `blockCount` can be higher than the backtrace limit but the response will include only values in the valid range.
 
     - `oldestBlock`: Oldest block in the requested range. 
     - `baseFees`: Array of block base fees for the requested range
