@@ -1,2 +1,7 @@
+authority-keys.json
+endorsor-keys.json
+executor-keys.json
+genesis-keys.json
+genesis.json
+genesis-mnemonic.txt
 node_modules
-custom-net
