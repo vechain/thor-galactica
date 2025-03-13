@@ -4,7 +4,7 @@ Galactica VIPs introduce key foundational upgrades to the protocol. From the Dyn
 
 ## VIP-251: Dynamic Fee Market
 
-This upgrade introduces a dynamic fee market for transactions, inspired by Ethereum EIP-1559. 
+This upgrade introduces a dynamic fee market for transactions, inspired by Ethereum [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). 
 
 It replaces the fixed-fee model with two components: a base fee that adjusts with network demand, and an optional priority fee that users can use to incentivize validators for faster processing.
 
@@ -14,7 +14,7 @@ Additionally, under VIP-251, 100% of base fees are burned, accelerating VTHO's p
 
 ## VIP-252: Typed Transactions
 
-This VIP introduces a standardized transaction envelope format that revolutionizes how VeChainThor processes blockchain operations, identifying and managing different types of blockchain transactions and making contract interactions easier.
+This VIP introduces a standardized transaction envelope format that revolutionizes how VeChainThor processes blockchain operations, identifying and managing different types of blockchain transactions and making contract interactions easier. It is inspired by Ethereum [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718).
 
 This modular approach allows VeChainThor to integrate new features smoothly and continuously, letting the protocol evolve without disrupting network operations or fragmenting the ecosystem. These are important foundations for the future.
 
