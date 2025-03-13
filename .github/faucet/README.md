@@ -15,11 +15,11 @@ We will be using this [custom faucet](https://d2j01c6f35ybnl.cloudfront.net/).
 
 3. And that would be it! You should be able to see now the transaction ID:
 
-   <img src="faucet-devnet-tx.png" alt="Faucet transaction" style="width: 100%; max-width: 600px;">
+   <img src="faucet-devnet-tx.png" alt="Faucet transaction" style="width: 60%; max-width: 600px;">
 
 4. And if [you check the API](https://galactica.green.dev.node.vechain.org/doc/stoplight-ui/#/paths/transactions-id/get) using that ID you will see 2 clauses, the first one for the VET transfer and the second one for the VTHO one (`0x0000000000000000000000000000456e65726779` is the VTHO contract address):
 
-   <img src="faucet-devnet-api.png" alt="Faucet Api Call" style="width: 100%; max-width: 600px;">
+   <img src="faucet-devnet-api.png" alt="Faucet Api Call" style="width: 60%; max-width: 600px;">
 
 ## Testnet
 
