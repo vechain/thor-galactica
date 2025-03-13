@@ -50,4 +50,4 @@ Currently Galactica is deployed in Devnet at this URL https://galactica.green.de
 
 If a new version has to be deployed, you need to trigger a GitHub Action [from this repo](https://github.com/vechain/node-hosting/actions/workflows/deploy.yml). The image selected there is created every time there is a new commit in the `release/galactica` branch at the [VeChainThor repository](https://github.com/vechain/thor/tree/release/galactica):
 
-   <img src="devnet-gha.png" alt="Faucet Api Call" style="width: 60%; max-width: 300px;">
+   <img src="devnet-gha.png" alt="Faucet Api Call" style="width: 40%; max-width: 300px;">
