@@ -2,33 +2,28 @@
 
 Welcome to **Thor Galactica** – the central repository for all artifacts, information, and documentation related to the Galactica hardfork.
 
-> **Note:** This repository is a work in progress. More detailed content (such as comprehensive documentation, faucet instructions, and genesis usage guidelines) will be added over time.
+> **Note:** This repository is a work in progress. More detailed content (such as comprehensive documentation) will be added over time.
 
 ---
 
-## Overview
+## Content Overview
 
-The **Galactica hardfork** marks an important milestone in our project’s evolution. This repository will eventually include:
+The **Galactica hardfork** marks an important milestone in our project’s evolution. This repository includes:
 
-- **Documentation:** In-depth guides, technical articles, and best practices.
-- **Faucet Instructions:** Step-by-step instructions for accessing and using our faucet.
-- **Genesis Usage Instructions:** Detailed guidance on leveraging genesis data and setting up your environment.
-- **Additional Resources:** Other relevant artifacts, tutorials, and references.
 
----
-
-## Contents
-
-- **[Documentation](docs/README.md)** *(Coming Soon)*  
+- **[Documentation](docs/README.md)** *(WIP)* 
   Detailed guides, technical documentation, and best practices.
   
-- **[Faucet Instructions](faucet.md)** *(Coming Soon)*  
+- **[Faucet Instructions](faucet/README.md)**
   How to access and effectively use the faucet.
   
-- **[Genesis Usage Instructions](genesis.md)** *(Coming Soon)*  
+- **[Genesis Instructions](genesis.md)** 
   Step-by-step instructions for working with genesis data.
 
-- **Additional Resources**  
+- **[VIPs](vip.md)** 
+  VeChain Improvement Proposals for the Galactica hardfork.
+
+- **Additional resources**  *(coming soon)* 
   More artifacts and support materials will be added as the project evolves.
 
 ---

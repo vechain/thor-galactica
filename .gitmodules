@@ -1,0 +1,4 @@
+[submodule "thor"]
+	path = thor
+	url = git@github.com:vechain/thor.git
+	branch = release/galactica
