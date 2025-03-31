@@ -1,7 +1,7 @@
 {
   "launchTime": 1703180212,
   "gasLimit": 40000000,
-  "extraData": "My custom VeChain",
+  "extraData": "Galactica",
   "forkConfig": {
     "VIP191": 0,
     "ETH_CONST": 0,
