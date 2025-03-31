@@ -5,3 +5,6 @@ genesis-keys.json
 genesis.json
 genesis-mnemonic.txt
 node_modules
+
+.vscode/
+.idea/
