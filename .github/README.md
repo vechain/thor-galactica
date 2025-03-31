@@ -72,3 +72,4 @@ For any questions, suggestions, or discussions, please open an issue or reach ou
 ---
 
 Stay tuned for further updates and expanded documentation on the Galactica hardfork!
+
