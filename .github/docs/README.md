@@ -42,12 +42,3 @@ A full up-to-date description of the flags can be found in the [usage documentat
 To run Galactica with Thor Solo, follow the instructions [here](../../thor/docs/usage.md#thor-solo).
 
 The only difference will be the location of the binary, which is `thor/bin/thor` from the root folder of this repository. All the flags and endpoints mentioned above apply.
-
-
-## Use Galactica on Devnet
-
-Currently Galactica is deployed in Devnet at this URL https://galactica.green.dev.node.vechain.org/.
-
-If a new version has to be deployed, you need to trigger a GitHub Action [from this repo](https://github.com/vechain/node-hosting/actions/workflows/deploy.yml). The image selected there is created every time there is a new commit in the `release/galactica` branch at the [VeChainThor repository](https://github.com/vechain/thor/tree/release/galactica):
-
-   <img src="devnet-gha.png" alt="Faucet Api Call" style="width: 40%; max-width: 300px;">
