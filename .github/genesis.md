@@ -48,21 +48,33 @@ The expected output files are located within the `custom-net` folder (or the dir
 
 ## How to Run a Node with the Genesis File
 
-This section provides instructions on how to run a node using the generated file. We assume that:
-1. The folder name is `custom-net`. Please change it accordingly if you provided a different one.
-2. You have built the binary [as described here](https://github.com/vechain/thor/blob/master/docs/build.md) under the `thor` submodule.
-3. You are running everything from the root of the repository.
+This section provides instructions on how to run a node using the generated file. We assume that the folder name is `custom-net`. Please change it accordingly if you provided a different one.
+
+### Binary
+- Clone the [Thor](https://github.com/vechain/thor) repo
+- Compile the binaries [as described here](https://github.com/vechain/thor/blob/master/docs/build.md)
+- Run for:
+    - solo: `./thor/bin/thor solo --genesis custom-net/genesis.json`
+    - custom network: `./thor/bin/thor --network custom-net/genesis.json`
+
+### Docker
+- Pull the image `docker pull ghcr.io/vechain/thor:release-galactica-latest`
+- Run for:
+    - solo: 
+    ```bash
+    docker run -d \
+        -v /path/to/custom-net:/custom-net \
+        -p 8669:8669 \
+        -p 11235:11235 \
+        ghcr.io/vechain/thor:release-galactica-latest solo --genesis /custom-net/genesis.json
+    ```
+    - custom network:
+    ```bash
+    docker run -d \
+        -v /path/to/custom-net:/custom-net \
+        -p 8669:8669 \
+        -p 11235:11235 \
+        ghcr.io/vechain/thor:release-galactica-latest --network /custom-net/genesis.json
+    ```
 
 You can also provide a URL with the location of the genesis file, like the one in [this example](https://raw.githubusercontent.com/vechain/thor/master/genesis/example.json).
-
-### Solo
-
-```bash
-./thor/bin/thor --genesis custom-net/genesis.json
-```
-
-### Custom Network
-
-```bash
-./thor/bin/thor --network custom-net/genesis.json
-```
