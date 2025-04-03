@@ -13,6 +13,8 @@ The **Galactica hardfork** marks an important milestone in our project’s evolu
 
 - **[Documentation](docs/README.md)** *(WIP)* 
   Detailed guides, technical documentation, and best practices.
+
+- **[Frequently Asked Questions (FAQ)](faq.md)** *(WIP)* Most common questions and gotchas with regards to Ethereum
   
 - **[Faucet Instructions](faucet/README.md)**
   How to access and effectively use the faucet.
