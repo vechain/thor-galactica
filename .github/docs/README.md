@@ -2,14 +2,24 @@
 
 This documentation is a work in progress and will be updated as new features are added.
 
-With the Galactica hardfork, the following API endpoints and flags are introduced.
+## Key concepts
+
+| Name | Description |
+|------|-------------|
+| **MaxFeePerGas** | The maximum total gas price a user is willing to pay for their transaction. |
+| **MaxPriorityFeePerGas** | The maximum tip a user is willing to pay validators to prioritize their transaction. |
+| **EffectiveGasPrice** | The final gas price charged when the transaction was executed. |
+| **EffectivePriorityPrice** | The final tip amount paid to the validator who included the transaction. |
+| **BaseFeePerGas** | The minimum gas price required for a transaction to be included in the current block.|
+
 
 ## Endpoints
 
-- `fees/history`: Similar to [`eth_feeHistory`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_feehistory/), this endpoint allows you to retrieve information about a range of block base fees and gas used ratios.
+- `fees/history`: Similar to [`eth_feeHistory`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_feehistory/), this endpoint allows you to retrieve information about a range of block base fees, gas used ratios and reward.
 
     _Request parameters_:
 
+    - `rewardPercentiles`: The percentiles of the rewards to be returned. Each percentile value must be between 0 and 100 and in ascending order. Values should be comma-separated. *For example: ?rewardPercentiles=25,50,75*
     - `blockCount`: The number of blocks to retrieve.
     - `newestBlock`: The highest block number to retrieve, its value is a `revision` following the existing VeChainThor endpoints.
 
@@ -17,10 +27,11 @@ With the Galactica hardfork, the following API endpoints and flags are introduce
     The range might not necessarily be `newestBlock` - `blockCount` if the oldest block does not exist or is not included due to the backtrace limit (see flags below for more details about this limit). `blockCount` can be higher than the backtrace limit, but the response will include only values within the valid range.
 
     - `oldestBlock`: The oldest block in the requested range.
-    - `baseFees`: An array of block base fees for the requested range.
-    - `gasUsedRatios`: An array of gas ratios (block gas used divided by the block gas limit) for the requested range.
+    - `baseFeePerGas`: An array of block base fees for the requested range.
+    - `gasUsedRatio`: An array of gas ratios (block gas used divided by the block gas limit) for the requested range.
+    - `reward`: An array of arrays of rewards by the percentiles provided in the request via *rewardPercentiles*. Each inner array contains the reward values for each percentile requested.
 
-- `fees/priority`: Similar to [`eth_maxPriorityFeePerGas`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_maxpriorityfeepergas/), this endpoint suggests a tip that is sufficient to be included as the `maxPriorityFeePerGas` value in a transaction, ensuring it is included in the closest possible block.
+- `fees/priority`: Similar to [`eth_maxPriorityFeePerGas`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_maxpriorityfeepergas/), this endpoint recommends an optimal tip value to use as `maxPriorityFeePerGas` in a transaction. Setting this recommended tip increases the likelihood of swift block inclusion.
 
     _Response parameters_:
     - `maxPriorityFeePerGas`: The tip value to be used as the `maxPriorityFeePerGas` in a transaction (also to be considered for `maxFeePerGas` since it is the block base fee plus this tip).

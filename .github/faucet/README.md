@@ -6,7 +6,7 @@ The main prerequisite is to have a wallet, such as [VeWorld](https://chromewebst
 
 ## Devnet
 
-We will be using this [custom faucet](https://d2j01c6f35ybnl.cloudfront.net/).
+We will be using this [custom faucet](https://faucet-galactica.dev.node.vechain.org/).
 
 1. Once you are in the website, click `Connect`, that will open the VeWorld extension.
 2. After that, click `Sign` to `Sign Certificate`:
@@ -17,7 +17,7 @@ We will be using this [custom faucet](https://d2j01c6f35ybnl.cloudfront.net/).
 
    <img src="faucet-devnet-tx.png" alt="Faucet transaction" style="width: 60%; max-width: 600px;">
 
-4. And if [you check the API](https://galactica.green.dev.node.vechain.org/doc/stoplight-ui/#/paths/transactions-id/get) using that ID you will see 2 clauses, the first one for the VET transfer and the second one for the VTHO one (`0x0000000000000000000000000000456e65726779` is the VTHO contract address):
+4. And if [you check the API](https://galactica.live.dev.node.vechain.org/doc/stoplight-ui/#/paths/transactions-id/get) using that ID you will see 2 clauses, the first one for the VET transfer and the second one for the VTHO one (`0x0000000000000000000000000000456e65726779` is the VTHO contract address):
 
    <img src="faucet-devnet-api.png" alt="Faucet Api Call" style="width: 60%; max-width: 600px;">
 
