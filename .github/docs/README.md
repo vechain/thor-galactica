@@ -13,6 +13,65 @@ This documentation is a work in progress and will be updated as new features are
 | **BaseFeePerGas** | The minimum gas price required for a transaction to be included in the current block.|
 
 
+## Methodology
+
+### Before Galactica
+
+The pre-Galactica transaction model implements a fixed gas pricing mechanism with the following characteristics:
+
+1. **Limited Gas Price Range**: Legacy transactions operate within a constrained gas price range
+2. **Fixed Validator Tip**: Validators receive a fixed 30% of the total gas fee paid by users
+3. **Base Gas Price**: A network parameter (currently set at 1e13 wei) that can be adjusted by the steering committee
+
+### After Galactica
+
+Galactica introduces a more flexible and efficient fee mechanism that supports two transaction types:
+
+#### 1. Legacy Transactions
+- Maintains backward compatibility with the original gas price formula:
+  ```
+  gasPrice = BaseGasPrice * (1 + GasPriceCoef/255)
+  ```
+- Continues to operate within the established gas price range
+
+#### 2. Dynamic Fee Transactions
+- Introduces two new parameters:
+  - `maxFeePerGas`: Maximum total fee per gas unit
+  - `maxPriorityFeePerGas`: Maximum priority fee (tip) per gas unit
+- Both parameters can range from 0 to 2^256 - 1 wei, offering significantly greater flexibility
+- Implements EIP-1559 style dynamic fee market mechanism
+
+#### Fee Market Mechanism
+
+1. **Base Fee Adjustment**:
+   - Automatically adjusts based on previous block's gas utilization
+   - Base fee is completely burned, reducing overall token supply
+
+2. **Transaction Field Mapping**:
+   - Both transaction types use `maxFeePerGas` and `maxPriorityFeePerGas`
+   - For legacy transactions:
+     ```
+     maxFeePerGas = gasPrice
+     maxPriorityFeePerGas = gasPrice
+     ```
+
+3. **Effective Fee Calculation**:
+   - Effective Gas Price (amount user pays per gas):
+     ```
+     Min(block.BaseFee + tx.maxPriorityFeePerGas, tx.maxFeePerGas)
+     ```
+   - Effective Priority Fee (tip to validator per gas):
+     ```
+     Min(tx.maxPriorityFeePerGas, tx.maxFeePerGas - block.BaseFee)
+     ```
+#### Notable Changes
+
+1. **Legacy Transaction Gas Price Constraints**: Legacy transactions are bound by a fixed gas price range of `1e13` to `2 * 1e13 wei`. These transactions may become un-executable during high network activity periods when `block.baseFee` exceeds `2 * 1e13 wei`.
+
+2. **Base Fee Refund Mechanism**: Dynamic fee transactions introduce a refund feature through independent `maxFeePerGas` and `maxPriorityFeePerGas` settings. When `block.baseFee` is less than `tx.maxFeePerGas - tx.maxPriorityFeePerGas`, users receive a refund of `tx.maxFeePerGas - tx.maxPriorityFeePerGas - block.baseFee` per gas unit. Legacy transactions do not support this refund mechanism.
+
+3. **Transaction Pricing Exclusion**: Both transaction types may become un-executable if the user-specified gas price (`tx.maxFeePerGas` for dynamic fee transactions or `tx.gasPriceCoef` for legacy transactions) falls below the current block's base fee.
+
 ## Endpoints
 
 - `fees/history`: Similar to [`eth_feeHistory`](https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_feehistory/), this endpoint allows you to retrieve information about a range of block base fees, gas used ratios and reward.
