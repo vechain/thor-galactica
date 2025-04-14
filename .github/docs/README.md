@@ -13,7 +13,7 @@ This documentation is a work in progress and will be updated as new features are
 | **BaseFeePerGas** | The minimum gas price required for a transaction to be included in the current block.|
 
 
-## Methodology
+## Transaction Pricing Methodology
 
 ### Before Galactica
 
